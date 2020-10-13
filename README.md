@@ -112,4 +112,4 @@ int main(){
 
 <img width="1320" alt="スクリーンショット 2020-10-13 18 20 35" src="https://user-images.githubusercontent.com/54575368/95842232-4258f300-0d81-11eb-9624-ce524a8cf090.png">
 
-
+プログラムをすべて選択しないと実行できなかったので注意。再生ボタンを押す前に、「ctr+A」を忘れずに。
