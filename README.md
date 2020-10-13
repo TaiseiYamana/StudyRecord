@@ -1,6 +1,7 @@
 # Visual Studio CodeとCode Running使用の調査記録
 ## 調査背景
-Visual Studio for mac　ではC#とF#のプロジェクトしかできなかった。WindowsではワークロードからダウンロードできるがVS for macではできない...なんて不便なんだ。  
+Visual Studio for mac　ではC#とF#のプロジェクトしかできなかった。WindowsではワークロードからダウンロードできるがVS for macではできない...なんて不便なんだ。 
+
 でもmacでGUIでC++を動かす環境はないだろうかと探したところVS Codeの拡張機能を使用するとVS Code上でgccを通して実行できるとのこと。よって、その使用法を調べたのが始まりである。
 
 ## Vs codeとは
@@ -41,6 +42,7 @@ C++用のワークスペースを作成する。メニューバーのファイ�
 code runnnerで実行する場合Mac側のコンパイラーとインクルードを使用するためそれぞれのデータパスをc_cpp_properties.jsonに登録する必要がある。
 
 手順はC++用のワークスペースを開いた状態で、以下の手順を行う。
+
 1.Ctr+Shift+Pでコマンドパレットを開く  
 2.C/Cpp:Edit configurations...を選択    
 3.c_pp_properties.jsonがワークスペース内に作成される。  
