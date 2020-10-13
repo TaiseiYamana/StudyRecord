@@ -92,7 +92,7 @@ code runnnerではデフォルトではこの標準入力ができないが、se
 ```
 参照:[VS Codeのsettings.jsonの開き方 - Qiita](https://qiita.com/y-w/items/614843b259c04bb91495)
 
-## 実証
+# 実証
 試しにhelloworld.cppを作成し、動かしてみよう。
 
 helloworld.cppを作成する手順。
