@@ -24,7 +24,7 @@ OS:Catelina 10.15.6
 
 <img width="1507" alt="スクリーンショット 2020-10-12 20 04 22" src="https://user-images.githubusercontent.com/54575368/95739667-23e1f180-0cc6-11eb-80ab-96e007e31881.png">
 
-## パソコン側のセットアップ
+## パソコン側の事前準備
 
 Mac側に事前にgccのコンパイラをインストールしておく。(結構時間かかります) macに最初からあるgccはなんか良くなく、brewでインストールするgccが本物のgccらしいと聞いた。
 
