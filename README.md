@@ -23,11 +23,29 @@ OS:Catelina 10.15.6
 
 <img width="1507" alt="スクリーンショット 2020-10-12 20 04 22" src="https://user-images.githubusercontent.com/54575368/95739667-23e1f180-0cc6-11eb-80ab-96e007e31881.png">
 
-##　パソコン側のセットアップ
+## パソコン側のセットアップ
 
-Mac側に事前にgccのコンパイラをインストールしておく。
+Mac側に事前にgccのコンパイラをインストールしておく。(結構時間かかります) macに最初からあるgccはなんか良くなく、brewでインストールするgccが本物のgccらしいと聞いた。
 
 ```
 $ brew install gcc
 
 ```
+
+Homebrew自体のセットアップは省略する。以下のurlを参照してください。
+[Mac Homebrewインストール手順 | Awesome Blog](https://awesome-linus.com/2019/08/17/mac-homebrew-install/)
+
+## ワークスペースの作成
+
+
+## codeコマンドのインストール
+ターミナルからワークショップを開くことができる。事前にVScodeのコマンドパレットを開き「シェルコマンド:PATH内に'code'コマンドをインストールします。(Shell Command:Install 'code' command in PATH)を選択する。
+次にターミナルに以下のコマンドを実行することによって、ワークショップを簡単に開ける。
+
+```
+$ code ワークショップのフォルダ名
+
+```
+
+
+
