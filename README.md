@@ -38,11 +38,11 @@ Homebrew自体のセットアップは省略する。以下のurlを参照して
 ## ワークスペースの作成
 C++用のワークスペースを作成する。
 
-メニューバーのファイル→開く→新規フォルダ　で任意の名前を入力し作成。
+メニューバーのファイル→開く→新規フォルダ　で任意の名前を入力する。
 
-今回、
-メニューバーのファイル→開く→新規フォルダ　で任意の名前を入力し作成
-メニューバーのファイル→開く→新規フォルダ　で任意の名前を入力し作成。
+今回はC++用なので例として「VScodes」などの名前にすると良い。
+
+最後に「開く」でワークスペース作成完了。
 
 ## c_cpp_properties.json を設定する。
 code runnnerで実行する場合Mac側のコンパイラーとインクルードを使用するためそれぞれのデータパスをc_cpp_properties.jsonに登録する必要がある。
@@ -86,7 +86,7 @@ $ code ワークショップのフォルダ名
 プログラム中に値をユーザーが入力し、処理を行うことを標準入力という。
 code runnnerではデフォルトではこの標準入力ができないが、settings.jsonにこの二行を追加すると標準入力が可能になる。
 
-```settings.json
+```JSON:settings.json
 "code-runner.clearPreviousOutput": true,
 "code-runner.runInTerminal": true,
 ```
@@ -97,10 +97,22 @@ code runnnerではデフォルトではこの標準入力ができないが、se
 
 helloworld.cppを作成する手順。
 
-1.  
-2.  
-3.  
+1. メニューバーのファイルから新規ファイルでhelloword.cppを作成  
+2. 次のサンプルコードをhelloword.cppにコピペ 
 
-エディター内のcppのコードをすべて選択した状態で右上にある再生ボタンを押すと実行される。
+```c++:helloworld.cpp
+#include <iostream>
+
+using namespace std;
+
+int main(){
+  cout << "Hello world." << endl;
+  return 0;
+}
+```
+
+3. エディター内のcppのコードをすべて選択した状態で右上にある再生ボタンを押すと実行されターミナルに結果がでる。
+
+<img width="1320" alt="スクリーンショット 2020-10-13 18 20 35" src="https://user-images.githubusercontent.com/54575368/95842232-4258f300-0d81-11eb-9624-ce524a8cf090.png">
 
 
