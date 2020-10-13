@@ -61,10 +61,7 @@ $ gcc -v
 この行のパスを確認してコピペ
 --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/4.2.1
 ```
-g++のコンパイルパスの確認
-```g++のコンパイルパスの確認
-$ g++ with
-```
+コンパイルパスはしなくてもデフォで実行できたので多分大丈夫だと思います。
 
 設定方法は以下のサイト参照。
 [C++で始める競プロ / VSCodeの環境構築（Mac） - Qiita](https://qiita.com/YasufumiNakama/items/6efa6975f551a1986e89#c_cpp_propertiesjson-%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B)
