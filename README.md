@@ -123,5 +123,5 @@ VScodeはいろんな拡張機能があるので、さまざまな言語で同�
 
 <img width="937" alt="スクリーンショット 2020-10-13 18 32 03" src="https://user-images.githubusercontent.com/54575368/95843208-67019a80-0d82-11eb-888b-5fcc707d6815.png">
 
-https://apps.apple.com/jp/app/coderunner-3/id955297617?mt=12
+macのCodeRunnerのURL:https://apps.apple.com/jp/app/coderunner-3/id955297617?mt=12
 
