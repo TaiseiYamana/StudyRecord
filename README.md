@@ -42,9 +42,9 @@ code runnnerで実行する場合Mac側のコンパイラーとインクルー�
 
 手順はC++用のワークスペースを開いた状態で、以下の手順を行う。
 1.Ctr+Shift+Pでコマンドパレットを開く  
-2.C/Cpp:Edit configurations...を選択  
-3.c_pp_properties.jsonがワークスペース内に作成される。
-3.c_pp_c_pp_properties.jsonを編集する。
+2.C/Cpp:Edit configurations...を選択    
+3.c_pp_properties.jsonがワークスペース内に作成される。  
+3.c_pp_c_pp_properties.jsonを編集する。  
 
 c_pp_c_pp_properties.jsonの"includePath"のところに自分のディバイスのgccのインクルードパスを確認し、このパスのうち~/includeまでをコピペする。デフォルトであるパスはワークスペース内のヘッダファイルのインクルードに必要で、任意で別のヘッダファイルをワークスペース内に入れとくとそのインクルードも行ってくれるという意味である。  
 gccのインクルードパス確認方法
