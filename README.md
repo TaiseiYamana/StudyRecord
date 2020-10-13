@@ -46,10 +46,15 @@ Homebrew自体のセットアップは省略する。以下のurlを参照して
 $ code ワークショップのフォルダ名
 
 ```
+## 標準入力に対応させる
 
+プログラム中に値をユーザーが入力し、処理を行うことを標準入力という。
+code runnnerではデフォルトではこの標準入力ができないが、settings.jsonにこの二行を追加すると標準入力が可能になる。
+
+```settings.json
 +    "code-runner.clearPreviousOutput": true,
 +    "code-runner.runInTerminal": true,
-
+```
 
 
 
