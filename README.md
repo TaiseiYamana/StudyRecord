@@ -47,5 +47,13 @@ $ code ワークショップのフォルダ名
 
 ```
 
++    "code-runner.clearPreviousOutput": true,
++    "code-runner.runInTerminal": true,
+
+
+
+
+
+
 
 
