@@ -46,13 +46,14 @@ code runnnerで実行する場合Mac側のコンパイラーとインクルー�
 3.c_pp_properties.jsonがワークスペース内に作成される。
 3.c_pp_c_pp_properties.jsonを編集する。
 
-c_pp_c_pp_properties.jsonの"includePath"のところに自分のディバイスのgccのインクルードパスを確認し、このパスのうち~/includeまでをコピペする。デフォルトであるパスはワークスペース内のヘッダファイルのインクルードに必要で、任意で別のヘッダファイルをワークスペース内に入れとくとそのインクルードも行ってくれるという意味である。
+c_pp_c_pp_properties.jsonの"includePath"のところに自分のディバイスのgccのインクルードパスを確認し、このパスのうち~/includeまでをコピペする。デフォルトであるパスはワークスペース内のヘッダファイルのインクルードに必要で、任意で別のヘッダファイルをワークスペース内に入れとくとそのインクルードも行ってくれるという意味である。  
+gccのインクルードパス確認方法
 ```gccのインクルードパス確認方法
 $ gcc -v
 この行のパスを確認してコピペ
 --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/4.2.1
-
 ```
+g++のコンパイルパスの確認
 ```g++のコンパイルパスの確認
 $ g++ with
 ```
