@@ -36,11 +36,15 @@ Homebrew自体のセットアップは省略する。以下のurlを参照して
 [Mac Homebrewインストール手順 | Awesome Blog](https://awesome-linus.com/2019/08/17/mac-homebrew-install/)
 
 ## ワークスペースの作成
+C++用のワークスペースを作成する。メニューバーのファイル→add→
+
+
+
 
 
 ## codeコマンドのインストール
 ターミナルからワークショップを開くことができる。事前にVScodeのコマンドパレットを開き「シェルコマンド:PATH内に'code'コマンドをインストールします。(Shell Command:Install 'code' command in PATH)を選択する。
-次にターミナルに以下のコマンドを実行することによって、ワークショップを簡単に開ける。
+次にターミナルに以下のコマンドを実行することによって、ワークショップを簡単に開ける。macのコマンドパレットを開くショートカットは「sift+command＋P」
 
 ```
 $ code ワークショップのフォルダ名
@@ -52,10 +56,10 @@ $ code ワークショップのフォルダ名
 code runnnerではデフォルトではこの標準入力ができないが、settings.jsonにこの二行を追加すると標準入力が可能になる。
 
 ```settings.json
-+    "code-runner.clearPreviousOutput": true,
-+    "code-runner.runInTerminal": true,
+"code-runner.clearPreviousOutput": true,
+"code-runner.runInTerminal": true,
 ```
-
+参照:[VS Codeのsettings.jsonの開き方 - Qiita](https://qiita.com/y-w/items/614843b259c04bb91495)
 
 
 
