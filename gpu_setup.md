@@ -38,8 +38,8 @@ options nouveau modeset=0　　
 $ cd /etc/modprobe.d
 $ sudo touch blacklist-nouveau.conf
 $ sudo chmod 777 blacklist-nouveau.conf
-$ sudo echo blacklist nouveau > blacklist-nouveau.conf
-$ sudo echo options nouveau modeset=0 >> blacklist-nouveau.conf
+$ echo blacklist nouveau > blacklist-nouveau.conf
+$ echo options nouveau modeset=0 >> blacklist-nouveau.conf
 
 $ cat blacklist-nouveau.conf #中身確認
 ```
@@ -47,3 +47,5 @@ $ cat blacklist-nouveau.conf #中身確認
 ```
 sudo update-initramfs -u
 ```
+Reboot into runlevel 3 by temporarily adding the number "3" and the word "nomodeset" to the end of the system's kernel boot parameters.
+runlevel 3は、Xserverを起動しないことを意味し、nomodesetはnouveauモジュールのロードをブロックします。これは、ビルド後にnvidiaモジュールをロードできるようにするためです。
