@@ -49,7 +49,7 @@ sudo update-initramfs -u
 ```
 
 Reboot into runlevel 3 by temporarily adding the number "3" and the word "nomodeset" to the end of the system's kernel boot parameters.
-## runlevelを一時的に３にして再起動
+## runlevelを一時的に３にして再起動 & kernel parameterに”nomodest”を追加
 ### runlevel
 - 3 マルチユーザーモード（テキストログイン）
 - 5 マルチユーザーモード (グラフィカルログイン)
