@@ -54,12 +54,23 @@ Reboot into runlevel 3 by temporarily adding the number "3" and the word "nomode
 - 3 マルチユーザーモード（テキストログイン）
 - 5 マルチユーザーモード (グラフィカルログイン)
 
-デフォルトは５
+現在のrunlevelの確認
 ```
 $ runtime
 N 5
 ```
+lebel3にして再起動
+```
+$ systemctl set-default multi-user.target
+$ sudo reboot
+```
+* Ubuntuのところにポイントがある時に「E」をクリック。  
+linuxの行のquiete splash　のあとに　"３"と"nomodeset"を記述してctr+X
 
+lebel5にして再起動
+```
+$ systemctl set-default graphical.target
+```
 Reboot into runlevel 3 by temporarily adding the number "3" and the word "nomodeset" to the end of the system's kernel boot parameters.
 runlevel 3は、Xserverを起動しないことを意味し、nomodesetはnouveauモジュールのロードをブロックします。これは、ビルド後にnvidiaモジュールをロードできるようにするためです。
 https://docs.nvidia.com/cuda/archive/10.1/cuda-quick-start-guide/index.html#ubuntu-x86_64-run
