@@ -26,7 +26,7 @@ runfile [local]
 ![Screenshot from 2020-11-08 21-42-04](https://user-images.githubusercontent.com/54575368/98465246-53bfde80-220b-11eb-914d-a99cdd7a0453.png)
 
 # インストール 
-公式ドキュメントのQuick start guideを見ながら順次実行していく。
+公式ドキュメントの[Quick start guide](https://docs.nvidia.com/cuda/archive/10.1/cuda-quick-start-guide/index.html#ubuntu-x86_64-run)を見ながら順次実行していく。
 ![Screenshot from 2020-11-09 21-01-15](https://user-images.githubusercontent.com/54575368/98539243-57b53480-22cf-11eb-93c6-1cf41b1c2822.png)
 
 ## Nouveauドライバの無効化
@@ -97,8 +97,8 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
 ```
 参考：https://askubuntu.com/questions/1236188/error-unsupported-compiler-version-9-3-0-when-installing-cuda-on-20-04
 ```
-sudo sh cuda_10.1.243_418.87.00_linux.run --silent --override-driver-check
+sudo sh cuda_10.1.243_418.87.00_linux.run #--silent
 ```
-.runの実行時では、versino.418のドライバーもインストールするかの選択がある。Quick Start guideの--silentオプションをして実行すると自動でversino.418のドライバーもインストールしてしまうため、先に入れたドライバーと競合してエラーが生じてしまうかも。
+.runの実行時では、versino.418のドライバーもインストールするかの選択がある。Quick Start guideの--silentオプションをして実行すると自動でversino.418のドライバーもインストールしてしまうため、先に入れたドライバーと競合してエラーが生じてしまうかもしれないので、何もオプションなしで実行する。
 grub menu出し方
 https://qiita.com/ricrowl/items/1d038d6b4412feedb25e
