@@ -31,18 +31,17 @@ runfile [local]
 
 ## Nouveauドライバの無効化
 - 注意点
-ubuntu 20.04で以下の無効化のための変更をすると、後の.runが動かなくなった。  
-おそらく先に最新ドライバー(450)が原因で、勝手に無効化  
-もしくはubuntuのバージョン20.04は標準でnouveauがないのどちらかが考えられる。(他にも理由があるかも)  
+ubuntu 20.04で以下の無効化のための変更をすると、後の.runの実行でドライバーが認識しなく動かなくなった。  
+おそらく先に最新ドライバー(450)が原因で、勝手に無効化 もしくはubuntuのバージョン20.04は標準でnouveauがないのどちらかが考えられる。(他にも理由があるかも)  
 先にnoubeauがあるかを確認して、もしあるのであれば次のコマンドを実行。なかったら無視して、runを実行。
 - 確認コマンド
 ```
 #nouveauがロードされているかを確認 (何も出なかったら無効化の作業をしなくていい)
 $ lsmod | grep nouveau
 ```
-もしない場合、次の変更が逆にネックになり、ドライバーの認識にエラーが生じてしまう。
+もしない場合、次におこなう変更が逆にネックになり、ドライバーの認識にエラーが生じてしまう。
 
-- 無効化への変更  
+- 無効化への変更作業 
 etc/modprobe.d/blacklist-nouveau.confに
 blacklist nouveau  　　
 options nouveau modeset=0　　
@@ -61,7 +60,8 @@ $ cat blacklist-nouveau.conf #中身確認
 sudo update-initramfs -u
 ```
 Reboot into runlevel 3 by temporarily adding the number "3" and the word "nomodeset" to the end of the system's kernel boot parameters.
-## runlevelを一時的に３にして再起動するためにkernel parameterに”nomodest”を追加
+## runlevelを一時的に３にして再起動するためにkernel parameterに"3","nomodest"を追加
+`Reboot into runlevel 3 by temporarily adding the number "3" and the word "nomodeset" to the end of the system's kernel boot parameters.`
 ### runlevel
 - 3 マルチユーザーモード（テキストログイン）
 - 5 マルチユーザーモード (グラフィカルログイン)
