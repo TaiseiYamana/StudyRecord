@@ -107,3 +107,6 @@ echo 'export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}' >> ~/.bashrc
 echo 'export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}' >> ~/.bashr
 source ~/.bashrc
 ```
+
+# CUDNN7.6のインストール
+ダウンロードサイト:https://developer.nvidia.com/cudnn
