@@ -42,7 +42,7 @@ export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 ### cudnnの変更
-- cuda-<version>以下にcudnnをコピーした場合
+- "cuda-<version>"以下にcudnnをコピーした場合
 pcにロードされているcudaのバージョンを切り替えると自動的に変更後のcudaにコピーされているcudnnのバージョンに切り替わると思う。
 
 - cuda以下にcudnnをコピーした場合
