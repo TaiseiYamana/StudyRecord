@@ -1,6 +1,12 @@
-# Cudaのインストール 作業調査
-https://codelabo.com/posts/20200229081221
-https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130
+# Cudaのインストール 作業記録
+参考サイト:  
+https://codelabo.com/posts/20200229081221  
+https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130  
+
+#　事前準備
+使いたいtensorfowのバージョンに何のCuda,cudnnのバージョンが必要かを調べる。tensorfowの[公式サイト](https://www.tensorflow.org/install/source)で確認できる。
+<img width="917" alt="スクリーンショット 2020-11-10 20 06 07" src="https://user-images.githubusercontent.com/54575368/98666304-2d777b80-2390-11eb-976b-b4859b44554c.png">
+
 # バージョン指定したcudaをダウンロード
 tensorflowのバージョンに応じたバージョンのCuda toolkitが必要。公式サイトの通常ダウンロードのところでは最新バージョンのcudaしかダウンロードできない。
 
@@ -109,4 +115,5 @@ source ~/.bashrc
 ```
 
 # CUDNN7.6のインストール
-ダウンロードサイト:https://developer.nvidia.com/cudnn
+ダウンロードサイト:https://developer.nvidia.com/cudnn  
+ダウンロードサイトのアーカイブからバージョンが選択できる。
