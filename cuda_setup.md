@@ -116,5 +116,5 @@ source ~/.bashrc
 
 cuda　確認
 ```
-nvcc -v
+nvcc -V
 ```
