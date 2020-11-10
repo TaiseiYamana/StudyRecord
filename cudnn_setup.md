@@ -28,7 +28,7 @@ $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 $ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
 ```
 
-## tensorflowのバージョンの変更に伴ってcudaとcudnnのバージョンを変更する場合
+# tensorflowのバージョンの変更に伴ってcudaとcudnnのバージョンを変更する場合
 ### 1.欲しいバージョンのcudaをインストールしcudaのパスを変更する。
 ~/.bashrcに記述したパスを変更する。
 
@@ -38,7 +38,7 @@ $ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn
 export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 <変更後 11.0>
-export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 ### cudnnの変更
