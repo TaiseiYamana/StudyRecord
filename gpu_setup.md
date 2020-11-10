@@ -30,16 +30,11 @@ runfile [local]
 ![Screenshot from 2020-11-09 21-01-15](https://user-images.githubusercontent.com/54575368/98539243-57b53480-22cf-11eb-93c6-1cf41b1c2822.png)
 
 ## Nouveauドライバの無効化
-- 注意点
-ubuntu 20.04で以下の無効化のための変更をすると、後の.runの実行でドライバーが認識しなく動かなくなった。  
-おそらく先に最新ドライバー(450)が原因で、勝手に無効化 もしくはubuntuのバージョン20.04は標準でnouveauがないのどちらかが考えられる。(他にも理由があるかも)  
-先にnoubeauがあるかを確認して、もしあるのであれば次のコマンドを実行。なかったら無視して、runを実行。
 - 確認コマンド
 ```
-#nouveauがロードされているかを確認 (何も出なかったら無効化の作業をしなくていい)
+#nouveauがロードされているかを確認 (何も出なかったら無効化の作業をしなくていいかも)
 $ lsmod | grep nouveau
 ```
-もしない場合、次におこなう変更が逆にネックになり、ドライバーの認識にエラーが生じてしまう。
 
 - 無効化への変更作業
 etc/modprobe.d/blacklist-nouveau.confに  
@@ -104,5 +99,6 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
 ```
 sudo sh cuda_10.1.243_418.87.00_linux.run --silent --override-driver-check
 ```
+.runの実行時では、versino.418のドライバーもインストールするかの選択がある。Quick Start guideの--silentオプションをして実行すると自動でversino.418のドライバーもインストールしてしまうため、先に入れたドライバーと競合してエラーが生じてしまうかも。
 grub menu出し方
 https://qiita.com/ricrowl/items/1d038d6b4412feedb25e
