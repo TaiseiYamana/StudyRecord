@@ -15,7 +15,7 @@
 ```
 $ tar -zxvf cudnn-10.1-linux-x64-v7.6.5.32.tgz
 ```
-事前にインストールしたcudaにcudnnをコピーする
+## 事前にインストールしたcudaにcudnnをコピーする
 ```
 # cuda-<version>以下にコピーする場合 
 $ sudo cp cuda/include/cudnn*.h /usr/local/cuda-<version>/include
@@ -27,3 +27,14 @@ $ sudo cp cuda/include/cudnn*.h /usr/local/cuda/include
 $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 $ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
 ```
+
+## tensorflowのバージョンの変更に伴ってcudaとcudnnのバージョンを変更する場合
+- cuda-<version>以下にコピーした場合、pcにロードされているcudaのバージョンを切り替えるのみ
+- cuda以下にコピーした
+- cuda-<version>以下にコピーした場合、pcにロードされているcudaのバージョンを切り替える
+
+- 先にコピーしたものを削除する。
+```
+# cuda以下にコピーした場合 
+sudo rm sudo rm /usr/local/cuda/include/cudnn.h
+
