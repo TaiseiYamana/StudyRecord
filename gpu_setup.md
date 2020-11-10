@@ -66,11 +66,11 @@ Reboot into runlevel 3 by temporarily adding the number "3" and the word "nomode
 $ runtime
 N 5
 ```
-- lebel3への変更
+- level3への変更
 ```
 $ systemctl set-default multi-user.target
 ```
-- lebel5への変更
+- level5への変更
 ```
 $ systemctl set-default graphical.target
 ```
@@ -84,8 +84,6 @@ grub menu出し方:https://qiita.com/ricrowl/items/1d038d6b4412feedb25e
 linuxの行のquiete splash　のあとに　"３"と"nomodeset"を記述してctr+X
 
 runlevel 3は、Xserverを起動しないことを意味し、nomodesetはnouveauモジュールのロードをブロックこれは、ビルド後にnvidiaモジュールをロードできるようにするためです。
-https://docs.nvidia.com/cuda/archive/10.1/cuda-quick-start-guide/index.html#ubuntu-x86_64-run
-
 
 
 ## gccのバージョンをグレードダウンする。
