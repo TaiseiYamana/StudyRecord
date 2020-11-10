@@ -99,3 +99,10 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
 sudo sh cuda_10.1.243_418.87.00_linux.run #--silent
 ```
 .runの実行時では、versino.418のドライバーもインストールするかの選択がある。Quick Start guideの--silentオプションをして実行すると自動でversino.418のドライバーもインストールしてしまうため、先に入れたドライバーと競合してエラーが生じてしまうかもしれないので、何もオプションなしで実行する。
+
+```
+echo -e "\n## CUDA and cuDNN paths"  >> ~/.bashrc
+echo 'export PATH=/usr/local/cuda-9.0/bin:${PATH}' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:${LD_LIBRARY_PATH}' >> ~/.bashrc
+source ~/.bashrc
+```
