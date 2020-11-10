@@ -114,9 +114,7 @@ echo 'export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_
 source ~/.bashrc
 ```
 
-# CUDNN7.6のインストール
-ダウンロードサイト:https://developer.nvidia.com/cudnn  
-ダウンロードサイトのアーカイブからバージョンが選択できる。事前にnvidiaのアカウント登録が必要。
-
-![Screenshot from 2020-11-10 20-11-53](https://user-images.githubusercontent.com/54575368/98667736-2cdfe480-2392-11eb-9ffc-4dc61d8c5c1a.png)
-
+cuda　確認
+```
+nvcc -v
+```
