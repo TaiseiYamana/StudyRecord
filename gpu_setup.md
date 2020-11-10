@@ -30,8 +30,21 @@ runfile [local]
 ![Screenshot from 2020-11-09 21-01-15](https://user-images.githubusercontent.com/54575368/98539243-57b53480-22cf-11eb-93c6-1cf41b1c2822.png)
 
 ## Nouveauドライバの無効化
+- 注意点
+ubuntu 20.04で以下の無効化のための変更をすると、後の.runが動かなくなった。  
+おそらく先に最新ドライバー(450)が原因で、勝手に無効化  
+もしくはubuntuのバージョン20.04は標準でnouveauがないのどちらかが考えられる。(他にも理由があるかも)  
+先にnoubeauがあるかを確認して、もしあるのであれば次のコマンドを実行。なかったら無視して、runを実行。
+- 確認コマンド
+```
+#nouveauがロードされているかを確認 (何も出なかったら無効化の作業をしなくていい)
+$ lsmod | grep nouveau
+```
+もしない場合、次の変更が逆にネックになり、ドライバーの認識にエラーが生じてしまう。
+
+- 無効化への変更  
 etc/modprobe.d/blacklist-nouveau.confに
-blacklist nouveau　　
+blacklist nouveau  　　
 options nouveau modeset=0　　
 を記述して適応する。
 ```
@@ -47,9 +60,8 @@ $ cat blacklist-nouveau.conf #中身確認
 ```
 sudo update-initramfs -u
 ```
-
 Reboot into runlevel 3 by temporarily adding the number "3" and the word "nomodeset" to the end of the system's kernel boot parameters.
-## runlevelを一時的に３にして再起動 & kernel parameterに”nomodest”を追加
+## runlevelを一時的に３にして再起動するためにkernel parameterに”nomodest”を追加
 ### runlevel
 - 3 マルチユーザーモード（テキストログイン）
 - 5 マルチユーザーモード (グラフィカルログイン)
@@ -59,21 +71,27 @@ Reboot into runlevel 3 by temporarily adding the number "3" and the word "nomode
 $ runtime
 N 5
 ```
-lebel3にして再起動
+- lebel3への変更
 ```
 $ systemctl set-default multi-user.target
-$ sudo reboot
 ```
-* Ubuntuのところにポイントがある時に「E」をクリック。  
-linuxの行のquiete splash　のあとに　"３"と"nomodeset"を記述してctr+X
-
-lebel5にして再起動
+- lebel5への変更
 ```
 $ systemctl set-default graphical.target
 ```
-Reboot into runlevel 3 by temporarily adding the number "3" and the word "nomodeset" to the end of the system's kernel boot parameters.
-runlevel 3は、Xserverを起動しないことを意味し、nomodesetはnouveauモジュールのロードをブロックします。これは、ビルド後にnvidiaモジュールをロードできるようにするためです。
+
+- 手順
+起動時、Shiftを押すと、grub menuが出る。
+Shiftをしても出ない場合、起動ごとにgrub menuを出す設定をするといい。  
+grub menu出し方:https://qiita.com/ricrowl/items/1d038d6b4412feedb25e
+
+* Ubuntuのところにポイントがある時に「E」をクリック。  
+linuxの行のquiete splash　のあとに　"３"と"nomodeset"を記述してctr+X
+
+runlevel 3は、Xserverを起動しないことを意味し、nomodesetはnouveauモジュールのロードをブロックこれは、ビルド後にnvidiaモジュールをロードできるようにするためです。
 https://docs.nvidia.com/cuda/archive/10.1/cuda-quick-start-guide/index.html#ubuntu-x86_64-run
+
+
 
 ## gccのバージョンをグレードダウンする。
 既存のgccのバージョン9.3はサポートしていなかった。
@@ -86,3 +104,5 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
 ```
 sudo sh cuda_10.1.243_418.87.00_linux.run --silent --override-driver-check
 ```
+grub menu出し方
+https://qiita.com/ricrowl/items/1d038d6b4412feedb25e
