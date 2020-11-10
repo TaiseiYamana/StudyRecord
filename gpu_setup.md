@@ -1,5 +1,6 @@
 # Cudaのインストール 作業調査
 https://codelabo.com/posts/20200229081221
+https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130
 # バージョン指定したcudaをダウンロード
 tensorflowのバージョンに応じたバージョンのCuda toolkitが必要。公式サイトの通常ダウンロードのところでは最新バージョンのcudaしかダウンロードできない。
 
@@ -102,11 +103,7 @@ sudo sh cuda_10.1.243_418.87.00_linux.run #--silent
 
 ```
 echo -e "\n## CUDA and cuDNN paths"  >> ~/.bashrc
-echo 'export PATH=/usr/local/cuda-9.0/bin:${PATH}' >> ~/.bashrc
-echo 'export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:${LD_LIBRARY_PATH}' >> ~/.bashrc
+echo 'export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}' >> ~/.bashr
 source ~/.bashrc
-
-$ export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
-$ export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64\
-                         ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
