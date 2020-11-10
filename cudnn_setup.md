@@ -17,12 +17,12 @@ $ tar -zxvf cudnn-10.1-linux-x64-v7.6.5.32.tgz
 ```
 ## 事前にインストールしたcudaにcudnnをコピーする
 ```
-# cuda-<version>以下にコピーする場合 
+# cuda-<version>/にコピーする場合 
 $ sudo cp cuda/include/cudnn*.h /usr/local/cuda-<version>/include
 $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda-<version>/lib64
 $ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
 
-# cuda以下にコピーする場合
+# cuda/にコピーする場合
 $ sudo cp cuda/include/cudnn*.h /usr/local/cuda/include
 $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 $ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
@@ -42,10 +42,10 @@ export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 ### cudnnの変更
-- `cuda-<version>`ディレクトリ以下にcudnnをコピーした場合
+- `cuda-<version>/`にcudnnをコピーした場合
 pcにロードされているcudaのバージョンを切り替えると自動的に変更後のcudaにコピーされているcudnnのバージョンに切り替わると思う。
 
-- `cuda`ディレクトリ以下にcudnnをコピーした場合
+- `cuda/`にcudnnをコピーした場合
 /usr/local/cuda/include  
 /usr/local/cuda/lib64  
 に変更前のcudnnが入っているので削除し、新たにダウンロードしたバージョンのcudnnを同様にコピーする。
@@ -53,4 +53,4 @@ pcにロードされているcudaのバージョンを切り替えると自動�
 sudo rm /usr/local/cuda/include/cudnn*.h
 sudo rm /usr/local/cuda/lib64/libcudnn*
 ```
-`cuda/`にコピー
+`cuda/`にコピーしてしまうとcuda変更時に削除作業が要求されるので、`cuda-<version>`にコピーしてcudaごと変更した方が便利かも知れない。
