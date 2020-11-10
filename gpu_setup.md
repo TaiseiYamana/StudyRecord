@@ -116,4 +116,7 @@ source ~/.bashrc
 
 # CUDNN7.6のインストール
 ダウンロードサイト:https://developer.nvidia.com/cudnn  
-ダウンロードサイトのアーカイブからバージョンが選択できる。
+ダウンロードサイトのアーカイブからバージョンが選択できる。事前にnvidiaのアカウント登録が必要。
+
+![Screenshot from 2020-11-10 20-11-53](https://user-images.githubusercontent.com/54575368/98667736-2cdfe480-2392-11eb-9ffc-4dc61d8c5c1a.png)
+
