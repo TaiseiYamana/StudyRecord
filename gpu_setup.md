@@ -74,3 +74,15 @@ $ systemctl set-default graphical.target
 Reboot into runlevel 3 by temporarily adding the number "3" and the word "nomodeset" to the end of the system's kernel boot parameters.
 runlevel 3は、Xserverを起動しないことを意味し、nomodesetはnouveauモジュールのロードをブロックします。これは、ビルド後にnvidiaモジュールをロードできるようにするためです。
 https://docs.nvidia.com/cuda/archive/10.1/cuda-quick-start-guide/index.html#ubuntu-x86_64-run
+
+## gccのバージョンをグレードダウンする。
+既存のgccのバージョン9.3はサポートしていなかった。
+```
+udo apt -y install gcc-8 g++-8
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 8
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
+```
+参考：https://askubuntu.com/questions/1236188/error-unsupported-compiler-version-9-3-0-when-installing-cuda-on-20-04
+```
+sudo sh cuda_10.1.243_418.87.00_linux.run --silent --override-driver-check
+```
