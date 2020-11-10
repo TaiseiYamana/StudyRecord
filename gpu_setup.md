@@ -1,5 +1,5 @@
 # Cudaのインストール 作業調査
-
+https://codelabo.com/posts/20200229081221
 # バージョン指定したcudaをダウンロード
 tensorflowのバージョンに応じたバージョンのCuda toolkitが必要。公式サイトの通常ダウンロードのところでは最新バージョンのcudaしかダウンロードできない。
 
@@ -94,6 +94,7 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 8
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
 ```
 参考：https://askubuntu.com/questions/1236188/error-unsupported-compiler-version-9-3-0-when-installing-cuda-on-20-04
+## インストーラーの実行
 ```
 sudo sh cuda_10.1.243_418.87.00_linux.run #--silent
 ```
