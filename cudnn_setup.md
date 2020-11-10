@@ -42,7 +42,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRAR
 export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 ### cudnnの変更
-64- cuda-<version>以下にcudnnをコピーした場合
+- cuda-<version>以下にcudnnをコピーした場合
 pcにロードされているcudaのバージョンを切り替えると自動的に変更後のcudaにコピーされているcudnnのバージョンに切り替わると思う。
 
 - cuda以下にcudnnをコピーした場合
@@ -50,6 +50,6 @@ pcにロードされているcudaのバージョンを切り替えると自動�
 /usr/local/cuda/lib64  
 に変更前のcudnnが入っているので削除し、新たにダウンロードしたバージョンのcudnnを同様にコピーする。
 ```
-# cuda以下にコピーした場合 
-sudo rm sudo rm /usr/local/cuda/include/cudnn.h
-
+sudo rm /usr/local/cuda/include/cudnn*.h
+sudo rm /usr/local/cuda/lib64/libcudnn*
+```
