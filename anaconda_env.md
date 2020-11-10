@@ -1,7 +1,7 @@
 # anacondaの仮想環境でjupyter notebookを動かす。
 参考：https://qiita.com/yuj/items/b9e82aeb0e4b2ffd34b9
 
-## 1.base環境でjupyter_environment_kernelsのインストール
+## jupyter_environment_kernelsのインストール
 `$ pip install environment_kernels`
 
 ## 2.Jupyterの設定ファイル生成
