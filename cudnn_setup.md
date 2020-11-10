@@ -29,11 +29,26 @@ $ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn
 ```
 
 ## tensorflowのバージョンの変更に伴ってcudaとcudnnのバージョンを変更する場合
-- cuda-<version>以下にコピーした場合、pcにロードされているcudaのバージョンを切り替えるのみ
-- cuda以下にコピーした
-- cuda-<version>以下にコピーした場合、pcにロードされているcudaのバージョンを切り替える
+### 1.欲しいバージョンのcudaをインストールしcudaのパスを変更する。
+~/.bashrcに記述したパスを変更する。
 
-- 先にコピーしたものを削除する。
+例
+```
+<変更前 10.1>
+export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+<変更後 11.0>
+export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+```
+### cudnnの変更
+64- cuda-<version>以下にcudnnをコピーした場合
+pcにロードされているcudaのバージョンを切り替えると自動的に変更後のcudaにコピーされているcudnnのバージョンに切り替わると思う。
+
+- cuda以下にcudnnをコピーした場合
+/usr/local/cuda/include  
+/usr/local/cuda/lib64  
+に変更前のcudnnが入っているので削除し、新たにダウンロードしたバージョンのcudnnを同様にコピーする。
 ```
 # cuda以下にコピーした場合 
 sudo rm sudo rm /usr/local/cuda/include/cudnn.h
