@@ -41,8 +41,8 @@ $ lsmod | grep nouveau
 ```
 もしない場合、次におこなう変更が逆にネックになり、ドライバーの認識にエラーが生じてしまう。
 
-- 無効化への変更作業 
-etc/modprobe.d/blacklist-nouveau.confに
+- 無効化への変更作業
+etc/modprobe.d/blacklist-nouveau.confに  
 blacklist nouveau  　　
 options nouveau modeset=0　　
 を記述して適応する。
