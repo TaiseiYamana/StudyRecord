@@ -100,5 +100,3 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
 sudo sh cuda_10.1.243_418.87.00_linux.run #--silent
 ```
 .runの実行時では、versino.418のドライバーもインストールするかの選択がある。Quick Start guideの--silentオプションをして実行すると自動でversino.418のドライバーもインストールしてしまうため、先に入れたドライバーと競合してエラーが生じてしまうかもしれないので、何もオプションなしで実行する。
-grub menu出し方
-https://qiita.com/ricrowl/items/1d038d6b4412feedb25e
