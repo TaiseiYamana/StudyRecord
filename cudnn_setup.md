@@ -53,3 +53,4 @@ pcにロードされているcudaのバージョンを切り替えると自動�
 sudo rm /usr/local/cuda/include/cudnn*.h
 sudo rm /usr/local/cuda/lib64/libcudnn*
 ```
+`cuda/`にコピー
