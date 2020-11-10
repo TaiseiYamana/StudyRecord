@@ -105,4 +105,8 @@ echo -e "\n## CUDA and cuDNN paths"  >> ~/.bashrc
 echo 'export PATH=/usr/local/cuda-9.0/bin:${PATH}' >> ~/.bashrc
 echo 'export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:${LD_LIBRARY_PATH}' >> ~/.bashrc
 source ~/.bashrc
+
+$ export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
+$ export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64\
+                         ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
