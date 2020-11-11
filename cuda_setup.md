@@ -49,7 +49,7 @@ wget http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installer
 ```
 
 # インストーラーの実行
-公式ドキュメントの[Quick start guide](https://docs.nvidia.com/cuda/archive/10.1/cuda-quick-start-guide/index.html#ubuntu-x86_64-run)にはインストーラーの実行前に必要な作業が乗っているのでそれを順次実行する。
+公式ドキュメントの[Quick start guide](https://docs.nvidia.com/cuda/archive/10.1/cuda-quick-start-guide/index.html#ubuntu-x86_64-run)にはインストーラーの実行前に必要な作業が載っているのでそれを順次実行する。
 ![スクリーンショット 2020-11-11 10 45 54](https://user-images.githubusercontent.com/54575368/98755336-af58ba80-240b-11eb-960c-37c5d592343a.png)
 
 ## Nouveauドライバの無効化
@@ -60,9 +60,9 @@ $ lsmod | grep nouveau
 ```
 
 - 無効化への変更作業
-etc/modprobe.d/blacklist-nouveau.confに  
-blacklist nouveau  　　
-options nouveau modeset=0　　
+etc/modprobe.d/blacklist-nouveau.confに    
+blacklist nouveau  
+options nouveau modeset=0  
 を記述して適応する。
 ```
 $ cd /etc/modprobe.d
