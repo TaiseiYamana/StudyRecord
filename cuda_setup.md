@@ -16,9 +16,9 @@ https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f892871
 <img width="917" alt="スクリーンショット 2020-11-10 20 06 07" src="https://user-images.githubusercontent.com/54575368/98666304-2d777b80-2390-11eb-976b-b4859b44554c.png">
 
 # 2.CUDAインストーラーをダウンロード
-CUDAのインストールというのは実際にはcudatoolkitのインストールである。CUDAのことをcudatoolkitと言い換えている記事もある。
+CUDAのインストールというのは実際にはcudatoolkitのインストールである。CUDAとcudatoolkitが混同しないように。
 
-公式サイトの通常ダウンロードのところでは最新バージョンのcudaしかダウンロードできないため、過去のリリースしたものがダウンロードできるアーカイブからダウンロード。
+公式サイトの通常ダウンロードのところでは最新バージョンのcudaしかダウンロードできないため、アーカイブからダウンロード。
 
 [NVIDIA CUDA Archived Documentation](https://developer.nvidia.com/cuda-toolkit-archive)で自分のダウンロードしいバージョンを選ぶことができる。
 各バージョンのドキュメントは[こちら](https://docs.nvidia.com/cuda/archive/)
