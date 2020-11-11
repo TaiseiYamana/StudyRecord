@@ -22,13 +22,14 @@ cudnnを`cuda/`か`cuda-<version>/`のどちらかにコピーする。公式ド
 # cuda-<version>/にコピーする場合 
 $ sudo cp cuda/include/cudnn*.h /usr/local/cuda-<version>/include
 $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda-<version>/lib64
-$ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
+$ sudo chmod a+r /usr/local/cuda-<version>/include/cudnn*.h /usr/local/cuda-<version>/lib64/libcudnn*
 
 # cuda/にコピーする場合
 $ sudo cp cuda/include/cudnn*.h /usr/local/cuda/include
 $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 $ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
 ```
+入れたCUDAのバージョンを`<version>`にいれてください。
 
 # 5.tensorflowのバージョンの変更に伴ってcudaとcudnnのバージョンを変更する場合
 ### 欲しいバージョンのcudaをインストールしcudaのパスを変更or追記
