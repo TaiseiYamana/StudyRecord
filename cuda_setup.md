@@ -7,7 +7,7 @@ tensorflowで機械学習するために、tensorflowのバージョンに対応
 環境
 Ubuntu 20.04
 参考サイト
-https://codelabo.com/posts/20200229081221
+https://codelabo.com/posts/20200229081221  
 https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130
 
 
