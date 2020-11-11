@@ -1,12 +1,12 @@
 # Cudaのインストール手順
 
-## 背景
+### 背景
 tensorflow 2.3.0を使用したいので、それに伴うcudatoolkitとcudnnををインストールしたかった。
 
-## 環境
+### 環境
 - Ubuntu 20.04  
 
-## 参考サイト:  
+### 参考サイト  
 https://codelabo.com/posts/20200229081221  
 https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130  
 
