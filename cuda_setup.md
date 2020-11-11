@@ -48,11 +48,11 @@ runfile [local]
 wget http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run
 ```
 
-# インストーラーの実行
+# 3.インストーラーの実行
 公式ドキュメントの[Quick start guide](https://docs.nvidia.com/cuda/archive/10.1/cuda-quick-start-guide/index.html#ubuntu-x86_64-run)にはインストーラーの実行前に必要な作業が載っているのでそれを順次実行する。
 ![スクリーンショット 2020-11-11 10 45 54](https://user-images.githubusercontent.com/54575368/98755336-af58ba80-240b-11eb-960c-37c5d592343a.png)
 
-## Nouveauドライバの無効化
+## 3.1.Nouveauドライバの無効化
 - 確認コマンド
 ```
 #nouveauがロードされているかを確認 (何も出なかったら無効化の作業をしなくていいかも)
@@ -78,7 +78,7 @@ $ cat blacklist-nouveau.conf #中身確認
 sudo update-initramfs -u
 ```
 Reboot into runlevel 3 by temporarily adding the number "3" and the word "nomodeset" to the end of the system's kernel boot parameters.
-## runlevelを一時的に３にして再起動するためにkernel parameterに"3","nomodest"を追加
+## 3.2.runlevelを一時的に３にして再起動するためにkernel parameterに"3","nomodest"を追加
 ※この作業はしなくても大丈夫だった。
 ### runlevelについて
 - 3 マルチユーザーモード（テキストログイン）
@@ -110,21 +110,26 @@ grub menu出し方:https://qiita.com/ricrowl/items/1d038d6b4412feedb25e
 
 runlevel 3は、Xserverを起動しないことを意味し、nomodesetはnouveauモジュールのロードをブロックこれは、ビルド後にnvidiaモジュールをロードできるようにするためです。
 
+## 3.3
 
-## gccのバージョンをグレードダウンする。
-既存のgccのバージョン9.3はサポートしていなかった。
+
+## 3.4.gccのバージョンをグレードダウンする。
+既存のgccのバージョン9.3はサポートしていため、最新のgccのバージョンでは、.runの実行でエラーが生じる
 ```
 udo apt -y install gcc-8 g++-8
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 8
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
 ```
 参考：https://askubuntu.com/questions/1236188/error-unsupported-compiler-version-9-3-0-when-installing-cuda-on-20-04
-## インストーラーの実行
+tensorflowのドキュメントでは、gcc7.3.1を推奨しているが、gcc8でも実行できた。
+
+## 3.5.runファイルの実行
 ```
 sudo sh cuda_10.1.243_418.87.00_linux.run #--silent
 ```
-.runの実行時では、versino.418のドライバーもインストールするかの選択がある。Quick Start guideの--silentオプションをして実行すると自動でversino.418のドライバーもインストールしてしまうため、先に入れたドライバーと競合してエラーが生じてしまうかもしれないので、何もオプションなしで実行する。
+.runの実行時では、versino.418のドライバーもインストールするかの選択がある。Quick Start guideの--silentオプションをして実行すると自動でversino.418のドライバーもインストールしてしまうため、先に入れたドライバーと競合してエラーが生じてしまう。何もオプション付けないで実行する。
 
+## 3.6.CUDAのPATHを通す
 ```
 echo -e "\n## CUDA and cuDNN paths"  >> ~/.bashrc
 echo 'export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}' >> ~/.bashrc
@@ -132,7 +137,7 @@ echo 'export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_
 source ~/.bashrc
 ```
 
-cuda　確認
+## 3.7.CUDAの確認
 ```
 nvcc -V
 ```
