@@ -1,4 +1,15 @@
-## Ubuntuにtensorflow,CUDA,cuDNNのセットアップ作業記録
+# Ubuntuにtensorflow,CUDA,cuDNNのセットアップ作業記録
+## この記事の内容
+tensorflowで機械学習するために、tensorflowのバージョンに対応するCUDAとcuDNNをローカルでインストールした時の作業を記録した。
+
+本記事はtensorflow 2.3.0を使用するために、CUDA10.1とcuDNN7.6のセットアップを行った。
+
+環境
+Ubuntu 20.04
+参考サイト
+https://codelabo.com/posts/20200229081221  
+https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130
+
 # cuDNNセットアップ編
 ダウンロードサイト:https://developer.nvidia.com/cudnn  
 事前にnvidiaのアカウント登録が必要。ダウンロードサイトのアーカイブからバージョンが選択できる。
