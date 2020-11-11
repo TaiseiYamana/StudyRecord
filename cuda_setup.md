@@ -1,4 +1,4 @@
-## Ubuntuにtensorflow,CUDA,cuDNNのセットアップ作業記録
+# Ubuntuにtensorflow,CUDA,cuDNNのセットアップ作業記録
 ## この記事の内容
 tensorflowで機械学習するために、tensorflowのバージョンに対応するCUDAとcuDNNをローカルでインストールした時の作業を記録した。
 
