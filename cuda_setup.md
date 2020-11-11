@@ -1,7 +1,7 @@
-# Ubuntuにtensorflow,Cudatoolkit,Cudnnのセットアップの作業記録
+# Ubuntuにtensorflow,CUDA,cuDNNのセットアップの作業記録
 
 ## この記事の内容
-tensorflow 2.3.0を使用したいので、それに対応するcudatoolkitとcudnnををインストール
+tensorflow 2.3.0を使用したいので、それに対応するCUDAとcuDNNをインストール
 
 ### 環境
 - Ubuntu 20.04  
