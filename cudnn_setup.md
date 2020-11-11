@@ -1,4 +1,5 @@
-# CUDNNのインストール
+## Ubuntuにtensorflow,CUDA,cuDNNのセットアップ作業記録
+# cuDNNセットアップ編
 ダウンロードサイト:https://developer.nvidia.com/cudnn  
 事前にnvidiaのアカウント登録が必要。ダウンロードサイトのアーカイブからバージョンが選択できる。
 ![Screenshot from 2020-11-10 20-11-53](https://user-images.githubusercontent.com/54575368/98667736-2cdfe480-2392-11eb-9ffc-4dc61d8c5c1a.png)
