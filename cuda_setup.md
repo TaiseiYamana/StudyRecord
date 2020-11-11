@@ -16,15 +16,18 @@ https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f892871
 <img width="917" alt="スクリーンショット 2020-11-10 20 06 07" src="https://user-images.githubusercontent.com/54575368/98666304-2d777b80-2390-11eb-976b-b4859b44554c.png">
 
 # 2.CUDAインストーラーをダウンロード
-CUDAのインストールというのは実際にはcudatoolkitのインストールである。CUDAとcudatoolkitが混同しないように。
+CUDAのインストールというのは実際にはCUDA toolkitのインストールである。CUDAとCUDA toolkitが混同しないように。
 
 公式サイトの通常ダウンロードのところでは最新バージョンのcudaしかダウンロードできないため、アーカイブからダウンロード。
 
 [NVIDIA CUDA Archived Documentation](https://developer.nvidia.com/cuda-toolkit-archive)で自分のダウンロードしいバージョンを選ぶことができる。
 各バージョンのドキュメントは[こちら](https://docs.nvidia.com/cuda/archive/)
 
-runfile[local]で入れていく。
-### Cuda 10.1
+![Screenshot from 2020-11-08 21-42-04](https://user-images.githubusercontent.com/54575368/98465246-53bfde80-220b-11eb-914d-a99cdd7a0453.png)
+
+Archived Releases から目的のCUDAを選択
+
+### CUDA 10.1
 - Select Target Platform  
 Linux
 
@@ -40,10 +43,13 @@ Ubuntu
 - Installer Type  
 runfile [local]
 
-![Screenshot from 2020-11-08 21-42-04](https://user-images.githubusercontent.com/54575368/98465246-53bfde80-220b-11eb-914d-a99cdd7a0453.png)
+上記の選択項目にチェックをしてでてきたwgetコマンドをターミナルで実行。
+```
+wget http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run
+```
 
-# インストール 
-公式ドキュメントの[Quick start guide](https://docs.nvidia.com/cuda/archive/10.1/cuda-quick-start-guide/index.html#ubuntu-x86_64-run)を見ながら順次実行していく。
+# インストーラーの実行
+公式ドキュメントの[Quick start guide](https://docs.nvidia.com/cuda/archive/10.1/cuda-quick-start-guide/index.html#ubuntu-x86_64-run)にはインストーラーの実行前に必要な作業が乗っているのでそれを順次実行する。
 ![スクリーンショット 2020-11-11 10 45 54](https://user-images.githubusercontent.com/54575368/98755336-af58ba80-240b-11eb-960c-37c5d592343a.png)
 
 ## Nouveauドライバの無効化
