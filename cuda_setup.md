@@ -1,7 +1,8 @@
 # Ubuntuにtensorflow,CUDA,cuDNNのセットアップ作業記録
 
 ## この記事の内容
-tensorflow 2.3.0を使用したいので、それに対応するCUDAとcuDNNをインストール
+tensorflowで機械学習をしたいので、それに対応するCUDAとcuDNNをインストール  
+今回はtensorflow 2.3.0を使用したいので、CUDA10.1とcuDNN7.6のインストールを行った。
 
 ### 環境
 - Ubuntu 20.04  
@@ -10,12 +11,13 @@ tensorflow 2.3.0を使用したいので、それに対応するCUDAとcuDNNを�
 https://codelabo.com/posts/20200229081221  
 https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130  
 
-# 事前準備
-使いたいtensorfowのバージョンに何のCuda,cudnnのバージョンが必要かを調べる。tensorfowの[公式サイト](https://www.tensorflow.org/install/source)で確認できる。
+# 1.事前準備
+使いたいtensorfowのバージョンに何のCUDA,cuDNNのバージョンが必要かを調べる。tensorfowの[公式サイト](https://www.tensorflow.org/install/source)で確認できる。
 <img width="917" alt="スクリーンショット 2020-11-10 20 06 07" src="https://user-images.githubusercontent.com/54575368/98666304-2d777b80-2390-11eb-976b-b4859b44554c.png">
 
-# バージョン指定したcudaをダウンロード
-tensorflowのバージョンに応じたバージョンのCuda toolkitが必要。公式サイトの通常ダウンロードのところでは最新バージョンのcudaしかダウンロードできない。
+# 2.目的のバージョンのCUDAインストーラーをダウンロード
+CUDAのインストールは実際はcudatoolkitインストールである。上記のテーブルからCUDAのバージョンを決め、そのバージョンのCUDAインストーラーをダウンロードする。
+公式サイトの通常ダウンロードのところでは最新バージョンのcudaしかダウンロードできないため、過去のリリースしたものがダウンロードできるアーカイブからダウンロードしていく。
 
 [NVIDIA CUDA Archived Documentation](https://developer.nvidia.com/cuda-toolkit-archive)で自分のダウンロードしいバージョンを選ぶことができる。
 各バージョンのドキュメントは[こちら](https://docs.nvidia.com/cuda/archive/)
