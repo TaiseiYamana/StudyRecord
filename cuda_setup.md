@@ -99,14 +99,14 @@ $ systemctl set-default graphical.target
 ```
 
 ### 手順
-起動時、Shiftを押すと、grub menuが出る。
+起動時、すぐShiftを押すと、grub menuが出る。
 Shiftをしても出ない場合、起動ごとにgrub menuを出す設定をするといい。  
 grub menu出し方:https://qiita.com/ricrowl/items/1d038d6b4412feedb25e
 
 * Ubuntuのところにポイントがある時に「E」をクリック。  
 ![IMG_6926](https://user-images.githubusercontent.com/54575368/98759686-f8f9d300-2414-11eb-873d-4ea9bde1b55d.JPG)
-linuxの行のquiete splash　のあとに　"３"と"nomodeset"を記述してctr+X
-![IMG_6933](https://user-images.githubusercontent.com/54575368/98759718-07e08580-2415-11eb-8ee8-3917b5806812.JPG)
+次に表示されるlinuxの行のquiete splash　のあとに　"３"と"nomodeset"を記述してctr+X
+![IMG_6934](https://user-images.githubusercontent.com/54575368/98760011-a79e1380-2415-11eb-9884-24f67679e9d4.JPG)
 
 runlevel 3は、Xserverを起動しないことを意味し、nomodesetはnouveauモジュールのロードをブロックこれは、ビルド後にnvidiaモジュールをロードできるようにするためです。
 
