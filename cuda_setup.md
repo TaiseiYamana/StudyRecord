@@ -79,8 +79,8 @@ sudo update-initramfs -u
 ```
 Reboot into runlevel 3 by temporarily adding the number "3" and the word "nomodeset" to the end of the system's kernel boot parameters.
 ## runlevelを一時的に３にして再起動するためにkernel parameterに"3","nomodest"を追加
-`Reboot into runlevel 3 by temporarily adding the number "3" and the word "nomodeset" to the end of the system's kernel boot parameters.`
-### runlevel
+※この作業はしなくても大丈夫だった。
+### runlevelについて
 - 3 マルチユーザーモード（テキストログイン）
 - 5 マルチユーザーモード (グラフィカルログイン)
 
@@ -98,13 +98,15 @@ $ systemctl set-default multi-user.target
 $ systemctl set-default graphical.target
 ```
 
-- 手順
+### 手順
 起動時、Shiftを押すと、grub menuが出る。
 Shiftをしても出ない場合、起動ごとにgrub menuを出す設定をするといい。  
 grub menu出し方:https://qiita.com/ricrowl/items/1d038d6b4412feedb25e
 
 * Ubuntuのところにポイントがある時に「E」をクリック。  
+![IMG_6926](https://user-images.githubusercontent.com/54575368/98759686-f8f9d300-2414-11eb-873d-4ea9bde1b55d.JPG)
 linuxの行のquiete splash　のあとに　"３"と"nomodeset"を記述してctr+X
+![IMG_6933](https://user-images.githubusercontent.com/54575368/98759718-07e08580-2415-11eb-8ee8-3917b5806812.JPG)
 
 runlevel 3は、Xserverを起動しないことを意味し、nomodesetはnouveauモジュールのロードをブロックこれは、ビルド後にnvidiaモジュールをロードできるようにするためです。
 
