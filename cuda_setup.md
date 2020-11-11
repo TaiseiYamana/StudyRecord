@@ -110,7 +110,12 @@ grub menu出し方:https://qiita.com/ricrowl/items/1d038d6b4412feedb25e
 
 runlevel 3は、Xserverを起動しないことを意味し、nomodesetはnouveauモジュールのロードをブロックこれは、ビルド後にnvidiaモジュールをロードできるようにするためです。
 
-## 3.3
+## 3.3 表示にNVIDIAGPUを使用するxorg.confファイルを作成
+```
+$ sudo nvidia-xconfig
+```
+これをしたあとに再起動するとマザボからのHDMIの信号がなくなった。GPUの他の映像ポートに繋いで対処。
+このコマンドの意味は調べていないので、後で調べる必要がある。
 
 
 ## 3.4.gccのバージョンをグレードダウンする。
