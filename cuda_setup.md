@@ -34,7 +34,7 @@ runfile [local]
 
 # インストール 
 公式ドキュメントの[Quick start guide](https://docs.nvidia.com/cuda/archive/10.1/cuda-quick-start-guide/index.html#ubuntu-x86_64-run)を見ながら順次実行していく。
-![Screenshot from 2020-11-09 21-01-15](https://user-images.githubusercontent.com/54575368/98539243-57b53480-22cf-11eb-93c6-1cf41b1c2822.png)
+![スクリーンショット 2020-11-11 10 45 54](https://user-images.githubusercontent.com/54575368/98755336-af58ba80-240b-11eb-960c-37c5d592343a.png)
 
 ## Nouveauドライバの無効化
 - 確認コマンド
